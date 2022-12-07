@@ -1,4 +1,4 @@
-package spark
+package version
 
 import (
 	"flag"
@@ -8,9 +8,9 @@ import (
 )
 
 var (
-	GoVersion string
-	BuildTime string
-	GitCommit string
+	goVersion string
+	buildTime string
+	gitCommit string
 )
 
 var (
@@ -28,10 +28,10 @@ func Parse() {
 func String() string {
 	s := strings.Builder{}
 	s.WriteString("Go Version: ")
-	s.WriteString(GoVersion + "\n")
+	s.WriteString(goVersion + "\n")
 	s.WriteString("Build Time: ")
-	s.WriteString(BuildTime + "\n")
+	s.WriteString(buildTime + "\n")
 	s.WriteString("Git Commit: ")
-	s.WriteString(GitCommit + "\n")
+	s.WriteString(gitCommit + "\n")
 	return s.String()
 }
